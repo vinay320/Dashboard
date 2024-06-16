@@ -5,53 +5,51 @@ import {
   FaSearchDollar,
   FaDollarSign,
 } from "react-icons/fa";
-import "../global.css"; 
+import "../global.css";
 
 const Sidebar = () => {
   const [activeItem, setActiveItem] = useState(null);
 
+  // Function to handle item click
   const handleItemClick = (itemName) => {
-    setActiveItem(itemName);
-    console.log(`Clicked on ${itemName}`);
-   
+    setActiveItem(itemName); // Set activeItem state to the clicked item
   };
 
   return (
     <aside className="sidebar">
       <nav>
         <ul>
-          <li className={`sidebar-item ${
-                activeItem === "Chart Line" ? "active" : ""
-              }`}
-              onClick={() => handleItemClick("Chart Line")}>
-              <FaChartLine size={24} />
-            </li>
           <li
-              className={`sidebar-item ${
-                activeItem === "Industry" ? "active" : ""
-              }`}
-              onClick={() => handleItemClick("Industry")}
-            >
-              <FaIndustry size={24} />
-           
+            className={`sidebar-item ${
+              activeItem === "Chart Line" ? "active" : ""
+            }`}
+            onClick={() => handleItemClick("Chart Line")}
+          >
+            <FaChartLine size={24} />
           </li>
           <li
-              className={`sidebar-item ${
-                activeItem === "Search Dollar" ? "active" : ""
-              }`}
-              onClick={() => handleItemClick("Search Dollar")}
-            >
-              <FaSearchDollar size={24} />
-            
+            className={`sidebar-item ${
+              activeItem === "Industry" ? "active" : ""
+            }`}
+            onClick={() => handleItemClick("Industry")}
+          >
+            <FaIndustry size={24} />
           </li>
           <li
-              className={`sidebar-item ${
-                activeItem === "Dollar Sign" ? "active" : ""
-              }`}
-              onClick={() => handleItemClick("Dollar Sign")}
-            >
-              <FaDollarSign size={24} />
-            
+            className={`sidebar-item ${
+              activeItem === "Search Dollar" ? "active" : ""
+            }`}
+            onClick={() => handleItemClick("Search Dollar")}
+          >
+            <FaSearchDollar size={24} />
+          </li>
+          <li
+            className={`sidebar-item ${
+              activeItem === "Dollar Sign" ? "active" : ""
+            }`}
+            onClick={() => handleItemClick("Dollar Sign")}
+          >
+            <FaDollarSign size={24} />
           </li>
         </ul>
       </nav>
@@ -60,4 +58,3 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
-    

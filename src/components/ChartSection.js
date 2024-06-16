@@ -9,17 +9,20 @@ import {
   Legend,
 } from "recharts";
 import axios from "axios";
-import { useChartContext } from "./ChartProvider";
-import "../global.css";
+import { useChartContext } from "./ChartProvider"; 
+import "../global.css"; 
 
 const ChartSection = () => {
-  const { selectedIndex } = useChartContext("S&P 500");
-  const [indicesData, setIndicesData] = useState([]);
-  const [timeRange, setTimeRange] = useState("ALL");
+  const { selectedIndex } = useChartContext("S&P 500"); // Get the selected index from the context
+  const [indicesData, setIndicesData] = useState([]); // State to store the indices data
+  const [timeRange, setTimeRange] = useState("ALL"); // State to store the selected time range
+
+  
   useEffect(() => {
     fetchData();
   }, []);
 
+  // Function to fetch data from the API
   const fetchData = async () => {
     try {
       const response = await axios.get(
@@ -31,6 +34,7 @@ const ChartSection = () => {
     }
   };
 
+  // Function to filter data based on selected index and time range
   const filterData = (indexName, range) => {
     const index = indicesData.find((index) => index.name === indexName);
     if (
@@ -38,12 +42,12 @@ const ChartSection = () => {
       !Array.isArray(index.chartData) ||
       index.chartData.length === 0
     ) {
-      return []; 
+      return [];
     }
 
     switch (range) {
       case "1D":
-        return index.chartData.slice(-1); 
+        return index.chartData.slice(-1);
       case "1W":
         return index.chartData.slice(-7); 
       case "1M":
@@ -53,16 +57,18 @@ const ChartSection = () => {
       case "1Y":
         return index.chartData.slice(-365);
       case "All":
-        return index.chartData;
+        return index.chartData; 
       default:
         return index.chartData;
     }
   };
 
+  // Function to handle time range change
   const handleTimeRangeChange = (range) => {
     setTimeRange(range);
   };
 
+  // Get the filtered data based on the selected index and time range
   const filteredData = filterData(selectedIndex, timeRange);
 
   return (
@@ -96,4 +102,3 @@ const ChartSection = () => {
 };
 
 export default ChartSection;
-

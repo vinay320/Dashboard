@@ -1,8 +1,10 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../firebaseConfig";
 
+// Create an authentication context
 const AuthContext = createContext();
 
+// Custom hook to use the authentication context
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {

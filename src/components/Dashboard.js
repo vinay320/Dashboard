@@ -8,7 +8,7 @@ import SectorPerformance from "./SectorPerformance";
 import Sidebar from "./Sidebar";
 
 const Dashboard = () => {
-  const { currentUser, logout } = useAuth();
+  const { currentUser, logout } = useAuth(); // Get current user and logout function from context 
 
   return currentUser ? (
     <div className="app-container">

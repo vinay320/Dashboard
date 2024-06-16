@@ -11,6 +11,7 @@ const MarketSummary = () => {
     fetchData();
   }, []);
 
+  // Function to fetch market summary data
   const fetchData = async () => {
     try {
       const response = await axios.get(
@@ -25,7 +26,7 @@ const MarketSummary = () => {
   };
 
   if (isLoading) {
-    return <div>Loading market summary...</div>; 
+    return <div>Loading market summary...</div>;
   }
 
   return (

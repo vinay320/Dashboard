@@ -8,7 +8,7 @@ import { useAuth } from "./AuthProvider";
 const Header = ({ userName }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [indicesData, setIndicesData] = useState([]);
-  const { logout } = useAuth();
+  const { logout } = useAuth(); // Access logout function from authentication context
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,17 +34,20 @@ const Header = ({ userName }) => {
   };
   const formattedDate = currentDate.toLocaleDateString("en-US", options);
 
+  // Open search modal
   const handleSearchClick = () => {
     setIsModalOpen(true);
   };
 
+  // Close search modal
   const handleModalClose = () => {
     setIsModalOpen(false);
   };
 
+  // Handle logout action
   const handleLogout = async () => {
     try {
-      await logout(); 
+      await logout();
     } catch (error) {
       console.error("Error logging out:", error);
     }

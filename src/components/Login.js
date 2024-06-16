@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      await signInWithEmailAndPassword(auth, email, password); // Call Firebase signInWithEmailAndPassword method
       alert("Login successful!");
       navigate("/dashboard");
     } catch (error) {

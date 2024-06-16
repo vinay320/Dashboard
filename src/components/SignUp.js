@@ -5,16 +5,21 @@ import { Link, useNavigate } from "react-router-dom";
 import "../global.css";
 
 const SignUp = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  const [email, setEmail] = useState(""); 
+  const [password, setPassword] = useState(""); 
+  const navigate = useNavigate(); 
 
+  // Function to handle user sign up
   const handleSignUp = async () => {
     try {
+      // Use Firebase Auth API to create user with email and password
       await createUserWithEmailAndPassword(auth, email, password);
+      // Alert user about successful registration
       alert("Registration successful!");
+      // Redirect user to login page after successful registration
       navigate("/login");
     } catch (error) {
+      // Alert user if there's an error during registration
       alert(error.message);
     }
   };

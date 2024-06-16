@@ -3,16 +3,16 @@ import { useChartContext } from "./ChartProvider";
 import "../global.css";
 
 const SearchModal = ({ onClose, data }) => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredResults, setFilteredResults] = useState([]);
-  const { updateSelectedIndex } = useChartContext();
-  const [showResults, setShowResults] = useState(false);
-  const modalRef = useRef(null);
+  const [searchQuery, setSearchQuery] = useState(""); // State for search query
+  const [filteredResults, setFilteredResults] = useState([]); // State for filtered search results
+  const { updateSelectedIndex } = useChartContext(); // Using updateSelectedIndex from ChartProvider context
+  const [showResults, setShowResults] = useState(false); // State to control visibility of search results
+  const modalRef = useRef(null); // Ref for modal DOM element
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
-        onClose(); 
+        onClose();
       }
     };
 
@@ -33,14 +33,14 @@ const SearchModal = ({ onClose, data }) => {
       );
 
       setFilteredResults(filtered);
-      setShowResults(true); 
+      setShowResults(true);
     } else {
       console.error("indicesData is not an array or is undefined");
     }
   };
 
   const handleResultClick = (indexName) => {
-    updateSelectedIndex(indexName); 
+    updateSelectedIndex(indexName);
     onClose();
   };
 
