@@ -1,0 +1,621 @@
+/* General styles */
+.app-container {
+    display: flex;
+    background-color: #1e1e1e;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    padding: 30px 100px 0px 100px;
+    flex-direction: column;
+}
+
+.main-content header {
+    padding: 1rem;
+    color: #fff;
+}
+
+.main-content main {
+    padding: 1rem;
+    overflow: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Components layout */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.summary-and-performance {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.other-components {
+    display: flex;
+    flex-direction: row;
+    background-color: #181819;
+    width: auto;
+    border-radius: 0.5rem;
+    gap: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Adjustments to MarketSummary and SectorPerformance styles can go here */
+
+.main-content header {
+    padding: 1rem;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.main-content main {
+    padding: 1rem;
+    overflow: auto;
+    flex: 1;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.main-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.sidebar {
+    width: 64px;
+    background-color: #1a202c;
+    color: #cbd5e0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 1rem;
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar nav ul li:hover {
+    background-color: #2d3748;
+    border-radius: 0.25rem;
+}
+
+.sidebar nav ul li svg {
+    color: inherit;
+}
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.sidebar-item:hover,
+.sidebar-item.active {
+    background-color: #4a5568;
+}
+
+.sidebar-item.active {
+    text-decoration: underline;
+    /* Underline effect for active item */
+}
+
+
+
+
+
+
+
+.header {
+    padding: 30px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgb(45, 44, 44);
+}
+
+.header h1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-size: 0.875rem;
+    color: #ccc;
+}
+
+.header nav {
+    display: flex;
+    margin-top: 0.5rem;
+    gap: 1.2rem;
+}
+
+.header nav .icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.header nav .icon:hover {
+    color: #ccc;
+}
+
+.header nav .icon-text {
+    border: 1px solid rgb(34, 34, 34);
+    border-radius: 30px;
+    background-color: rgb(34, 34, 34);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.header nav .btn
+{
+    background:none;
+    color: white;
+    border-radius: 30px;
+    border: 0px solid rgb(34, 34, 34);
+
+}
+
+
+
+
+
+.markets-overview {
+    padding: 1.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background: none;
+    margin-bottom: 2rem;
+    width: 100%;
+    overflow: auto;
+}
+
+.markets-overview h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.markets-overview ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.markets-overview li {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.markets-overview .change {
+    font-weight: bold;
+}
+
+.markets-overview .text-green {
+    color: green;
+}
+
+.markets-overview .text-red {
+    color: red;
+}
+
+.chart-section {
+    padding: 1.5rem;
+    background: none;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.chart-section h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.chart-section .time-range-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.chart-section .time-range-buttons button {
+    padding: 0.75rem 1.5rem;
+    background-color: #2b6cb0;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chart-section .time-range-buttons button:hover {
+    background-color: #4299e1;
+}
+
+.chart-section .recharts-wrapper {
+    width: 100%;
+}
+
+.market-summary {
+    padding: 1.5rem;
+    background-color: #000;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.market-summary h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.market-summary p {
+    border: 1px solid rgb(34, 34, 34);
+    border-radius: 40px;
+    background-color: rgb(34, 34, 34);
+    padding: 5px;
+    margin-top: 0.5rem;
+    color: #fff;
+    display: flex;
+    width: auto;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.market-summary .icon {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.market-summary .sentiment {
+    font-weight: bold;
+    color: #fff;
+}
+
+.market-summary .text-green {
+    color: #38a169;
+}
+
+.market-summary .text-red {
+    color: #e53e3e;
+}
+
+.sector-performance {
+    padding: 1.5rem;
+    background-color: #181819;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2rem;
+    color: #cbd5e0;
+    width: 100%;
+}
+
+.sector-performance h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.sector-performance .flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.sector-performance .w-1/2 {
+    width: 50%;
+}
+
+.sector-performance ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sector-performance li {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.sector-performance .text-green {
+    color: #48bb78;
+}
+
+.sector-performance .text-red {
+    color: #f56565;
+}
+
+.sector-performance .all-sectors {
+    font-weight: bold;
+    color: #3182ce;
+}
+
+.sector-performance .all-values {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .main-content {
+        padding: 30px 50px 0px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .main-content {
+        padding: 30px 20px 0px 20px;
+    }
+
+    .summary-and-performance,
+    .other-components {
+        flex-direction: column;
+    }
+
+    .markets-overview,
+    .chart-section,
+    .market-summary,
+    .sector-performance {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 1rem;
+    }
+
+    .header nav {
+        margin-top: 1rem;
+        gap: 0.5rem;
+    }
+
+    .chart-section .time-range-buttons button {
+        padding: 0.5rem 1rem;
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+    }
+}
+
+
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 80%;
+    max-width: 600px;
+    color: #fff;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #333;
+    background: #333;
+    color: #fff;
+}
+
+button[type="submit"] {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    background: #2b6cb0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-results {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.result-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #333;
+}
+
+/* login.css */
+
+.login-container {
+    max-width: 400px;
+        margin: 0 auto;
+        height: 100vh;
+        padding: 2rem;
+        align-content: center;
+        background-color: #1e1e1e;
+        border-radius: 0.5rem;
+        color: #fff;
+    }
+
+.login-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #333;
+    border-radius: 0.25rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.login-container button {
+    width: auto;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #2b6cb0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #4299e1;
+}
+
+.login-container p {
+    margin-top: 0.5rem;
+    color: #ccc;
+}
+
+.login-container p a {
+    color: #4299e1;
+    text-decoration: none;
+}
+
+.login-container p a:hover {
+    text-decoration: underline;
+}
+/* signup.css */
+
+.signup-container {
+    max-width: 400px;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 2rem;
+    align-content: center;
+    background-color: #1e1e1e;
+    border-radius: 0.5rem;
+    color: #fff;
+}
+
+.signup-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.signup-container input[type="email"],
+.signup-container input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #333;
+    border-radius: 0.25rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.signup-container button {
+    width: auto;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #2b6cb0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.signup-container button:hover {
+    background-color: #4299e1;
+}
+
+.signup-container p {
+    margin-top: 0.5rem;
+    color: #ccc;
+}
+
+.signup-container p a {
+    color: #4299e1;
+    text-decoration: none;
+}
+
+.signup-container p a:hover {
+    text-decoration: underline;
+}
